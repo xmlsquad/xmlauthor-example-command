@@ -31,7 +31,7 @@ final class HelloWorldCommandTest extends TestCase
         $commandTester->execute(array(
             'command'  => $command->getName(),
             '--targetDirectory'=>'/tmp',
-            '--configFilename' => 'scapesettings.yml.dist',
+            '--configFilename' => 'scapesettings.yaml.dist',
         ));
 
         $output = $commandTester->getDisplay();
@@ -41,7 +41,7 @@ final class HelloWorldCommandTest extends TestCase
         $commandTester->execute(array(
             'command'  => $command->getName(),
             '--targetDirectory'=>'/tmp',
-            '--configFilename' => 'scapesettings.yml.dist',
+            '--configFilename' => 'scapesettings.yaml.dist',
         ));
         $output = $commandTester->getDisplay();
         $this->assertContains("[HelloWorld.txt] already exists.\n", $output);
