@@ -9,16 +9,19 @@ use PHPUnit\Framework\TestCase;
 
 final class HelloWorldCommandTest extends TestCase
 {
+
+    const TMP_TEST_DATA_DIR = "tests/tmp-test-data";
+
     public function setUp()
     {
-        if (file_exists('/tmp/HelloWorld.txt')) {
-            unlink('/tmp/HelloWorld.txt');
+        if (file_exists(SELF::TMP_TEST_DATA_DIR .'/HelloWorld.txt')) {
+            unlink(SELF::TMP_TEST_DATA_DIR .'/HelloWorld.txt');
         }
     }
 
     public function tearDown()
     {
-        unlink('/tmp/HelloWorld.txt');
+        unlink(SELF::TMP_TEST_DATA_DIR .'/HelloWorld.txt');
     }
 
     public function testExecute()
@@ -30,7 +33,7 @@ final class HelloWorldCommandTest extends TestCase
         $commandTester = new CommandTester($command);
         $commandTester->execute(array(
             'command'  => $command->getName(),
-            '--targetDirectory'=>'/tmp',
+            '--targetDirectory'=> SELF::TMP_TEST_DATA_DIR,
             '--configFilename' => 'scapesettings.yaml.dist',
         ));
 
@@ -40,7 +43,7 @@ final class HelloWorldCommandTest extends TestCase
         $commandTester = new CommandTester($command);
         $commandTester->execute(array(
             'command'  => $command->getName(),
-            '--targetDirectory'=>'/tmp',
+            '--targetDirectory'=> SELF::TMP_TEST_DATA_DIR,
             '--configFilename' => 'scapesettings.yaml.dist',
         ));
         $output = $commandTester->getDisplay();
