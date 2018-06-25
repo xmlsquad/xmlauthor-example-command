@@ -43,9 +43,9 @@ A git project that acts as an example of an xmlauthor command.
 
     ```php
     # src/Command/NewCommand.php
-    namespace Forikal\PackageName\Command;
+    namespace XmlSquad\PackageName\Command;
     
-    use Forikal\Library\Command\AbstractCommand;
+    use XmlSquad\Library\Command\AbstractCommand;
     
     class NewCommand extends AbstractCommand
     {

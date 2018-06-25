@@ -1,8 +1,8 @@
 <?php
 
-namespace Forikal\Example\Tests\Command;
+namespace XmlSquad\Example\Tests\Command;
 
-use Forikal\Example\Command\HelloWorldCommand;
+use XmlSquad\Example\Command\HelloWorldCommand;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Tester\CommandTester;
 use PHPUnit\Framework\TestCase;

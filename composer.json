@@ -1,5 +1,5 @@
 {
-    "name": "forikal-uk/xmlauthor-example-command",
+    "name": "xmlsquad/xmlauthor-example-command",
     "description": "Example command for managing xml files.",
     "type": "library",
     "license": "Apache-2.0",
@@ -8,12 +8,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Forikal\\Example\\": "src/"
+            "XmlSquad\\Example\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Forikal\\Example\\Tests\\": "tests/"
+            "XmlSquad\\Example\\Tests\\": "tests/"
         }
     },
     "repositories-local": [{
@@ -25,14 +25,14 @@
     }],
     "repositories": [{
         "type": "vcs",
-        "url": "https://github.com/forikal-uk/xml-authoring-library.git"
+        "url": "https://github.com/xmlsquad/xml-authoring-library.git"
     }],
     "require": {
         "php": ">=7.1",
         "symfony/console": "^3.4",
         "symfony/filesystem": "^3.4",
         "symfony/yaml": "^3.4",
-        "forikal-uk/xml-authoring-library": "dev-master"
+        "xmlsquad/xml-authoring-library": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "^7.1"
