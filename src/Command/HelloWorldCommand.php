@@ -29,7 +29,7 @@ class HelloWorldCommand extends AbstractCommand
             ->setName(self::NAME)
             ->setDescription('Example command')
             ->addOption('targetDirectory', 'd', InputOption::VALUE_REQUIRED, 'Name of directory to write to', './')
-        ;
+            ->doConfigureConfigFilename();
     }
 
     /**
