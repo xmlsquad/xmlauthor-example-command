@@ -23,13 +23,11 @@ class HelloWorldCommand extends AbstractCommand
      */
     protected function configure()
     {
-        parent::configure();
-
         $this
             ->setName(self::NAME)
             ->setDescription('Example command')
             ->addOption('targetDirectory', 'd', InputOption::VALUE_REQUIRED, 'Name of directory to write to', './')
-        ;
+            ->doConfigureConfigFilename();
     }
 
     /**
