@@ -6,3 +6,8 @@
 # HelloWorld-related
 /scapesettings.yaml
 /HelloWorld.txt
+
+
+# Temporary test folder.
+tests/tmp-test-data/*
+!tests/tmp-test-data/.gitkeep
