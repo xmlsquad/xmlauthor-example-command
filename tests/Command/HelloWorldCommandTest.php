@@ -34,7 +34,7 @@ final class HelloWorldCommandTest extends TestCase
         $commandTester->execute(array(
             'command'  => $command->getName(),
             '--targetDirectory'=> SELF::TMP_TEST_DATA_DIR,
-            '--configFilename' => 'scapesettings.yaml.dist',
+            '--configFilename' => 'XmlAuthoringProjectSettings.yaml.dist',
         ));
 
         $output = $commandTester->getDisplay();
@@ -44,7 +44,7 @@ final class HelloWorldCommandTest extends TestCase
         $commandTester->execute(array(
             'command'  => $command->getName(),
             '--targetDirectory'=> SELF::TMP_TEST_DATA_DIR,
-            '--configFilename' => 'scapesettings.yaml.dist',
+            '--configFilename' => 'XmlAuthoringProjectSettings.yaml.dist',
         ));
         $output = $commandTester->getDisplay();
         $this->assertContains("[HelloWorld.txt] already exists.\n", $output);

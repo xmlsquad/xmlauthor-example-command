@@ -19,7 +19,7 @@ A git project that acts as an example of an xmlauthor command.
 * Try `hello-world` command:
 
     ```bash
-    bin/hello-world --configFilename=scapesettings.yaml.dist
+    bin/hello-world --configFilename=XmlAuthoringProjectSettings.yaml.dist
     ```
 
 ### Building own command
