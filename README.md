@@ -67,7 +67,7 @@ A git project that acts as an example of an xmlauthor command.
                 dump($configOptions);
             } catch (FileNotFoundException $e) {
                 $output->writeln(
-                    $e->getMessage()
+                    $e->getMessage(), OutputInterface::VERBOSITY_NORMAL
                 );
             }
         }

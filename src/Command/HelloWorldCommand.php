@@ -39,7 +39,7 @@ class HelloWorldCommand extends AbstractCommand
             $targetDirectory = rtrim($input->getOption('targetDirectory'), '/');
             $targetFilename = $targetDirectory . DIRECTORY_SEPARATOR . self::FILENAME;
             if (file_exists($targetFilename)) {
-                $output->writeln(sprintf('[%s] already exists.', self::FILENAME));
+                $output->writeln(sprintf('[%s] already exists.', self::FILENAME), OutputInterface::VERBOSITY_NORMAL);
                 return;
             }
 
@@ -49,10 +49,11 @@ class HelloWorldCommand extends AbstractCommand
             $name = $configOptions[self::CONFIG_ROOT_KEY][self::CONFIG_NAME_KEY];
             $message = sprintf('Hello world, %s', $name);
             $this->filesystem->dumpFile($targetFilename, $message);
-            $output->writeln(sprintf('[%s] successfully written.', self::FILENAME));
+            $output->writeln(sprintf('[%s] successfully written.', self::FILENAME),OutputInterface::VERBOSITY_NORMAL);
         } catch (FileNotFoundException $e) {
             $output->writeln(
-                $e->getMessage()
+                $e->getMessage(),
+                OutputInterface::VERBOSITY_NORMAL
             );
         }
     }
